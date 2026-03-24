@@ -1,0 +1,389 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #111;
+}
+
+.navbar {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    border-bottom: 2px solid white;
+}
+
+/* Logo styling */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo span {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: rgb(218, 218, 232);
+    text-transform: uppercase;
+}
+
+/* Nav links styling */
+.nav-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.active{
+    border-bottom: 3px solid white;
+}
+
+.nav-links a:hover{
+    color: royalblue;
+    border-bottom: none;
+}
+
+.hero {
+    min-height: 50vh;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("images/car-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.hero button {
+    padding: 14px 28px;
+    background: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background: white;
+    color: black;
+    font-size: 16px;
+    border:2px solid black;
+}
+
+.section{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#services{
+    background-color: rgb(246, 244, 244);
+    text-align: center;
+}
+
+#services h1 {
+    color: #222222;
+    padding-top: 25px;
+    padding-bottom: 0%;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    margin: 20px auto; 
+    max-width: 1100px;
+    padding:20px;
+}
+
+.card {
+    margin: 20px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 5, 0.7);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 120px;
+    width: 170px;
+    font-size: 22px;
+    font-weight: 200;
+    border-radius: 10px;
+}
+
+.card-img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.card-img:hover {
+    box-shadow: 0 10px 15px rgba(17, 17, 179, 0.1);
+    border: 5px solid black;
+    height: 130px;
+    width: 180px;
+}
+
+#about {
+    background-color:  #2f2c2c;
+    color: white;
+}
+
+#about p {
+    max-width: 800px;
+    margin: 15px auto;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+#booking {
+    min-height: 60vh;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(255, 255, 255, 0.12)
+        ),
+        url("images/car-repair.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#booking form {
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 25px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.6);
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: 120px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05), 
+                0 20px 48px rgb(64, 64, 126,0.7);
+}
+
+#booking input,
+#booking select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+#booking input:focus,
+#booking select:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(65, 105, 225, 0.7);
+}
+
+#booking h2{
+    text-align: center;
+    color: #2f2c2c;
+    margin-bottom: 20px;
+}
+
+#booking button {
+    width: 100%;
+    height: 48px;
+    background: rgb(64, 64, 126);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#booking button:hover {
+    background:#2f2c2c;
+}
+
+/* Container to dim the background */
+.success-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Slight dimming */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-box {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 90%;
+}
+
+#msg {
+    color: #2f2c2c;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+
+#okBtn {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s ease;
+}
+
+#okBtn:hover {
+    background-color: #000;
+}
+
+.error-state #okBtn {
+    background-color: #d9534f;
+}
+
+.contact-section {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2f2c2c;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.contact h2{
+    align-items: center;
+}
+
+.contact-brand {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.address {
+    line-height: 1.5;
+    color: #cccccc;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.7;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 350px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+}
+
+.info-label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 600;
+}
+
+.info-label i {
+    width: 20px;
+    color: #ffffff;
+}
+
+.info-value {
+    color: #eeeeee;
+    text-align: right;
+}
+
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+    }
+    .contact-container {
+        flex-direction: column;
+    }
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
