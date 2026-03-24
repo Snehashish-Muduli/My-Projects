@@ -4,11 +4,11 @@ A collection of diverse projects showcasing my journey in coding, problem-solvin
 
 Coding Language:
 --------------------------------
-Python
-Java
-Html
-Css
-JavaScript
+📖 Python
+📖 Java
+📖 Html
+📖 Css
+📖 JavaScript
 
 Highlights:
 --------------------------------
